@@ -17,6 +17,7 @@
 2. Run the `bin/setup` script.
 3. Start the application with `bin/dev`.
 4. Visit http://localhost:3000.
+5. (Optional) Run tests with `bundle exec rails test:system`
 
 ## Information about Bullet Train
 If this is your first time working on a Bullet Train application, be sure to review the [Bullet Train Basic Techniques](https://bullettrain.co/docs/getting-started) and the [Bullet Train Developer Documentation](https://bullettrain.co/docs).
