@@ -1,8 +1,8 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.236.0/containers/javascript-node-postgres
-// Update the VARIANT arg in docker-compose.yml to pick a Node.js version
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.236.0/containers/ruby-rails-postgres
+// Update the VARIANT arg in docker-compose.yml to pick a Ruby version
 {
-	"name": "Node.js & PostgreSQL",
+	"name": "Ruby on Rails & Postgres",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/workspace",
@@ -13,22 +13,21 @@
 		"vscode": {
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"dbaeumer.vscode-eslint"
+				"rebornix.Ruby"
 			]
 		}
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// This can be used to network with other containers or with the host.
-	
-	"forwardPorts": [3000, 5432],
+	// This can be used to network with other containers or the host.
+	"forwardPorts": [3000, 5432, 6379],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "yarn install",
+	// "postCreateCommand": "bundle install && rake db:setup",
 
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "node",
+	"remoteUser": "vscode",
 	"features": {
-		"ruby": "3.1"
+		"homebrew": "latest"
 	}
 }
